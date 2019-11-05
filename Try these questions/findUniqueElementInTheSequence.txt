@@ -1,0 +1,6 @@
+Given a sequence of integers. There are 2 types of integers in the sequence 
+either repeating or unique. You are told that there is only 1 unique integer
+in the sequence. All the repeating integers are repeated odd no. of times(eg 3, 5, 7, etc).
+Your task is to find this unique integer in O(n) time complexity and O(1) space complexity.
+
+eg {2, 2, 2, 5, 6, 5, 5} => answer is 1
