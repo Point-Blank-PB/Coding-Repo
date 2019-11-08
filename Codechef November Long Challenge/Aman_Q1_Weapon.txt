@@ -1,0 +1,76 @@
+//To Run:Rename to "Main.java"
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+
+public class Main {
+
+    public static void main(String[] args) throws java.lang.Exception{
+        
+        Scanner scan = new Scanner(System.in);
+
+        int t = scan.nextInt();
+
+        while (t!=0) {
+        	t--;
+
+            int n = scan.nextInt();
+
+            scan.nextLine();
+            
+
+            String[] s = new String[n];
+
+            for (int i=0; i<n; i++) {
+                s[i] = scan.nextLine();
+            }
+
+            int[][] str = new int[n][10];
+
+            int[] x = new int[10];
+
+            for (int i=0; i<n; i++) {
+                for (int j = 0; j < 10; j++) {
+                    str[i][j] = Integer.parseInt(String.valueOf(s[i].charAt(j)));
+                }
+            }
+            
+
+            for (int i=0; i<n-1; i++) {
+                for (int j=0; j<10; j++) {
+                    if (str[i][j] == str[i+1][j])
+                        x[j] = 0;
+                    else
+                        x[j] = 1;
+
+                    str[i + 1][j] = x[j];
+                }
+
+            }
+            
+        int count = 0;
+        
+        if(n==1)
+        {
+           for (int i = 0; i < 10; i++) {
+                if (str[0][i] == 1)
+                    count++;
+            } 
+        }
+        else
+        {
+            for (int i = 0; i < 10; i++) {
+                if (x[i] == 1)
+                    count++;
+            }
+        }
+        
+        System.out.println(count);
+
+
+        }
+    }
+
+}
