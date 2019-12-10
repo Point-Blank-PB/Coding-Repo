@@ -1,2 +1,2 @@
-Master.
+First document
 GitHub Test Document.
